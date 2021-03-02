@@ -1,0 +1,367 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+
+.hide{
+    display: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('./bg.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+    z-index: -1;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 20px 46px 20px 26px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #111;
+    z-index: 999;
+    top: 0;
+}
+
+.logo{
+    box-sizing: border-box;
+    background-color: #dddddd;
+    padding: 10px;
+    left: 90px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto 30px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    transition: .7s ease;
+    transform: translateX(-50%);
+}
+.logo i{
+    font-size: 3rem;
+    color: #e74c3c;
+    transition: .7s ease;
+}
+
+.logo:hover{
+    background-color: rgba(1, 1, 1, 0.7);
+}
+
+.logo:hover i{
+    color: white;
+}
+
+
+
+nav{
+    box-sizing: border-box;
+    padding: 10px 0px;
+}
+
+.menu-bar{
+    display: flex;
+}
+
+.menu{
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.menu a{
+    color: #ffffff;
+}
+
+.menu:hover{
+    transform: scale(0.8);
+}
+
+.container{
+    display: flex;
+    position: relative;
+    margin-top: 110px;
+}
+
+.maincontainer{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+    transition: 1s ease;
+    -ms-overflow-style: none;
+}
+
+.maincontainer::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.wrap{
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    transition: 1s ease;
+    
+}
+.container-view{
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    padding: 30px;
+}
+
+.greet, .subgreet{
+    display: block;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+    margin: 30px 0px;
+}
+
+.greet{
+    font-size: 3.5rem;
+}
+
+.subgreet{
+    font-size: 2rem;
+}
+
+.about, .project{
+    background-color: #ffffff;
+}
+
+.skill{
+    background-color: #2d3436;
+    color: white
+}
+
+.togmenu{
+    display: none;
+    font-size: 3rem;
+    color: white;
+}
+
+
+
+/*------------------about 화면-------------- */
+.main{
+    height: 100vh;
+}
+
+
+.subtitle{
+    margin: 0px auto;
+    text-align: center;
+    font-size: 2rem;
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: orange 3px solid;
+    border-radius: 25%;
+}
+
+.context{
+    margin: 50px 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.about .myphoto{
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+}
+.about p{
+    position: relative;
+    width: 40%;
+    font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 1260px){
+    html{
+        font-size: 13px;
+    }
+
+    .menu{
+        width: 120px;
+    }
+    .imgbox{
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+    .logoutbtn, .modifybtn{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    } 
+    .logo{
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        left: 70px;
+        transform: translateX(-50%);
+    }
+    .loginview{
+        top: 30px;
+    }
+
+    .sidecontainer{
+        width: 300px;
+    }
+
+    .inputbox{
+        width: 200px;
+    }
+
+    .btn{
+        width: 150px;
+    }
+    .contact-icon{
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1000px){
+    .logo{
+        left: 0;
+    }
+
+    .loginview{
+        position: fixed;
+        top: 20px;
+        right: 100px;
+    }
+
+    nav{
+        position: fixed;
+        display: block;
+        top: 90px;
+        right: -65%;
+        background-color: rgb(51, 48, 59);
+        width: 65%;
+        height: 100vh;
+        z-index: 999;
+        transition: .7s ease;
+    }
+    .active{
+        right: 0%;
+    }
+
+
+    .menu, .menu-bar{
+        display: block;
+        width: 100%;
+    }
+
+    .menu{
+        margin: 20px 0;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #ffffff;
+        cursor: pointer;
+        transition: 0.4s ease;
+        border-radius: 6px;
+    }
+
+    .menu:hover{
+        background-color: #cccccc;
+    }
+
+    .wrap{
+        width: 100%;
+    }
+
+    .togmenu{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .sidecontainer{
+        top: 90px;
+       left: -100%;
+       height: calc(100vh - 90px);
+    }
+
+    .maincontainer{
+        width: 100%;
+        overflow: auto;
+    }
+
+    .subtitle{
+        width: 250px;
+    }
+
+    .context{
+        display: block;
+        margin: 30px auto;
+    }
+
+    .about p{
+        width: calc(100% - 60px);
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .about .myphoto{
+        margin: 30px auto;
+    }
+}
+
+
+
+
+
+
+
+

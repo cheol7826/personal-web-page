@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer DaeCheol</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/e097520785.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="signup-container">
+        <h2 class="signup-title">회원가입</h2>
+        <form action="signup" method="post">
+            <div class="signup-left">
+                <label for="sup-name">이름</label>
+                <div class="sup-box sup-name-box">
+                    <input type="text" id="sup-name" name="name">
+                </div>
+
+                <label for="sup-id">아이디</label>
+                <div class="sup-box sup-id-box">
+                    <input type="text" id="sup-id" name="id">
+                </div>
+
+                <label for="sup-pw">비밀번호</label>
+                <div class="sup-box sup-pw-box">
+                    <input type="password" minlength="4" id="sup-pw" name="password">
+                </div>
+
+                <label for="sup-pwck">비밀번호 확인</label>
+                <div class="sup-box sup-pwck-box">
+                    <input type="password" id="sup-pwck" name="passwordcheck">
+                </div>
+            </div>
+
+            <div class="signup-right">
+                <label for="sup-birth">생년월일(8자리)</label>
+                <div class="sup-box sup-birth-box">
+                    <input type="text" id="sup-birth" name="birth" minlength="8" maxlength="8">
+                </div>
+
+                <label for="sup-email">이메일</label>
+                <div class="sup-box sup-email-box">
+                    <input type="text" id="sup-email" name="email">
+                </div>
+                <div class="submit-box">
+                    <input type="submit" class="submitbtn signupbtn" value="가입">
+                    <a href="login.html" class="submitbtn canclebtn">취소</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="test.js"></script>
+</html>

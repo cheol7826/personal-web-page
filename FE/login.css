@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.login-container{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.login-container form{
+    position: relative;
+    display: block;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.login-container-input{
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container-submit{
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.submitbtn{
+    display: block;
+    outline: none;
+    border: none; 
+    font-size: 1.5rem; 
+    border-radius: 10px;
+    color: white;
+}
+
+.submitbtn:hover{
+    cursor: pointer;
+}
+
+.loginbtn{
+    margin: 20px auto;
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(45deg, #3498db 20%, #2ecc71);
+    transition: .4s;
+    background-size: 200% 200%;
+}
+
+.loginbtn:hover{
+    background-position: 100% 100%;
+}
+
+.signupbtn, .guestbtn{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    margin: 10px;
+    transition: .4s;
+}
+
+.signupbtn{
+    background-color: #9b59b6aa;
+}
+
+.signupbtn:hover{
+    background-color: #9b59b6;
+}
+
+.guestbtn{
+    background-color: #e74c3caa;
+}
+
+.guestbtn:hover{
+    background-color: #e74c3c;
+}
+
+.userid-box, .userpw-box{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 410px;
+    height: 60px;
+    background: linear-gradient(45deg, #9b59b6, #3498db, #2ecc71);
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.login-container-input label{
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+#userid, #userpw{
+    font-size: 1.2rem;
+    display: block;
+    width: 400px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1000px){
+    .login-container{
+        height: 800px;
+    }
+
+    .userid-box, .userpw-box{
+        width: 300px;
+    }
+
+    #userid, #userpw{
+        width: 290px;
+    }
+}
