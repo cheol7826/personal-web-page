@@ -18,24 +18,28 @@
     display: block;
     position: absolute;
     right: 5px;
-    top: 0px;
-    width: 50px;
-    height: 50px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
     padding: 3px;
-    border: 2px solid #d35400;
+    border: 2px solid #636e72;
     border-radius: 5px;
-    color: #d35400;
+    color: #FFF;
+    background-color: #636e72;
     text-align: center;
-    font-size: 35px;
+    font-size: 22.5px;
     transition: .5s;
 }
 
 .board-title a:hover{
-    background-color: #d35400;
-    color: #fff;
+    background-color: #fff;
+    color: #636e72;
+    border-color: #fff;
 }
 
 .board-list{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -79,15 +83,23 @@
     font-size: 1rem;
 }
 
+.list-box-border{
+    width: 440px;
+    height: 290px;
+    padding: 5px;
+    margin: 40px;
+    border-radius: 5px;
+    background: #2d343688;
+}
+
 .list-box{
     position: relative;
     display: block;
     width: 400px;
     height: 250px;
-    background-color: #ecf0f1;
-    border: 2px #ecf0f1 solid;
+    background-color: #fffd;
     border-radius: 5px;
-    margin: 40px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -104,21 +116,22 @@
     content: "";
     background-color: black;
     width: 100%;
-    height: 1px;
+    height: 0.5px;
     margin: 15px auto;
 }
 
 .list-edit a{
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 15px;
+    bottom: 10px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: .3s;
+    color: #636e72;
 }
 
 .list-edit a:hover{
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 .list-box-info{
@@ -190,6 +203,103 @@
     transition: 0.3s;
 }
 
+/*게시판 상세 조회 board-info.html*/
+.detail-board-list{
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    background: #2d343688;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.detail-list-box{
+    margin: 0;
+    width: 100%;
+    background-color: #fffd;
+    min-height: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+.detail-list-title{
+    margin: 10px;
+    padding: 10px;
+}
+
+.detail-list-body{
+     margin: 10px;
+     padding: 10px;
+     min-height: 350px;
+}
+
+.detail-list-info{
+    margin: 10px;
+    padding: 10px;
+}
+
+/*댓글*/
+.comment-box{
+    width: 100%;
+    overflow-y: scroll;
+    height: 240px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.comment-list-detail{
+    background: #ced6e044;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.comment-list-detail-name{
+    background-color: #ced6e0cc;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.comment-add{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 15px auto;
+}
+
+.comment-add-text{
+    display: block;
+    width: 92%;
+    height: 80px;
+    resize: none;
+    outline: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.comment-add-submit{
+    display: block;
+    width: 6%;
+    height: 80px;
+    outline: none;
+    border: none;
+    background-color: #2ecc71;
+    color: #fff;
+    font-weight: bolder;
+    transition: .4s;
+}
+
+.comment-add-submit:hover{
+    cursor: pointer;
+    background-color: #2ecc71aa;
+}
+
+
 @media screen and (max-width: 1260px){
     .list-box{
         width: 300px;
@@ -198,6 +308,10 @@
 }
 
 @media screen and (max-width: 1100px){
+    body{
+        font-size: 16px;
+    }
+
     .board-main{
         width: 100%;
         margin: 0;
@@ -217,10 +331,14 @@
         display: block;
     }
 
+    .list-box-border{
+        width: calc(100% - 40px);
+        margin: 60px auto;
+    }
+
     .list-box{
         width: calc(100% - 40px);
         font-size: 1.3rem;
-        margin: 60px auto;
     }
 
     .board-option{
@@ -231,4 +349,23 @@
         left: 0;
         font-weight: bolder;
     }
+
+    .detail-board-list{
+        width: 100%;
+    }
+
+    .comment-add{
+        display: block;
+    }
+
+    .comment-add-text{
+        width: 100%;
+    }
+
+    .comment-add-submit{
+        width: 50%;
+        margin: 20px auto;
+        font-size: 1.5rem;
+    }
+
 }
